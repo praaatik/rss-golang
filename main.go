@@ -40,6 +40,7 @@ func main() {
 
 	// path for the below is /v1/ready
 	v1Router.Get("/healthz", handlerReadiness)
+	v1Router.Get("/err", handlerErr)
 
 	srv := &http.Server{
 		Handler: router,
